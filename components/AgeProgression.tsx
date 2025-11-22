@@ -35,27 +35,27 @@ const AgeProgression = () => {
   };
 
   return (
-    <section id="how-it-works" className="py-24 bg-neo-white border-t-4 border-neo-black">
+    <section id="how-it-works" className="py-24 bg-neo-white border-t-4 border-neo-black overflow-hidden">
         <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-6xl font-black uppercase mb-4">
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase mb-4">
                     Level Up <span className="bg-neo-black text-neo-white px-2">Responsibly</span>
                 </h2>
-                <p className="font-mono text-lg">Start strict. Loosen the leash as they prove they can handle it.</p>
+                <p className="font-mono text-base sm:text-lg">Start strict. Loosen the leash as they prove they can handle it.</p>
             </div>
 
             {/* Tabs */}
             <div className="flex justify-center mb-12">
-                <div className="border-4 border-neo-black bg-neo-gray p-2 flex gap-4 shadow-neo">
+                <div className="border-4 border-neo-black bg-neo-gray p-1 sm:p-2 flex gap-2 sm:gap-4 shadow-neo w-full max-w-md justify-center">
                     <button 
                         onClick={() => setActiveTab('starter')}
-                        className={`px-8 py-3 font-black uppercase text-xl transition-all border-2 ${activeTab === 'starter' ? 'bg-neo-green border-neo-black shadow-neo-sm translate-y-[-4px]' : 'bg-transparent border-transparent text-gray-500 hover:text-black'}`}
+                        className={`flex-1 sm:flex-none px-4 sm:px-8 py-3 font-black uppercase text-sm sm:text-xl transition-all border-2 ${activeTab === 'starter' ? 'bg-neo-green border-neo-black shadow-neo-sm translate-y-[-4px]' : 'bg-transparent border-transparent text-gray-500 hover:text-black'}`}
                     >
                         Ages 8-12
                     </button>
                     <button 
                         onClick={() => setActiveTab('pro')}
-                        className={`px-8 py-3 font-black uppercase text-xl transition-all border-2 ${activeTab === 'pro' ? 'bg-neo-purple text-white border-neo-black shadow-neo-sm translate-y-[-4px]' : 'bg-transparent border-transparent text-gray-500 hover:text-black'}`}
+                        className={`flex-1 sm:flex-none px-4 sm:px-8 py-3 font-black uppercase text-sm sm:text-xl transition-all border-2 ${activeTab === 'pro' ? 'bg-neo-purple text-white border-neo-black shadow-neo-sm translate-y-[-4px]' : 'bg-transparent border-transparent text-gray-500 hover:text-black'}`}
                     >
                         Ages 13-16
                     </button>
@@ -63,9 +63,9 @@ const AgeProgression = () => {
             </div>
 
             {/* Content Card */}
-            <div className="max-w-5xl mx-auto bg-neo-white border-4 border-neo-black shadow-neo-xl p-8 md:p-12 relative">
+            <div className="max-w-5xl mx-auto bg-neo-white border-4 border-neo-black shadow-neo-xl p-6 md:p-12 relative">
                 {/* Decorative Corner */}
-                <div className="absolute top-0 right-0 w-16 h-16 bg-neo-black triangle-corner"></div>
+                <div className="absolute top-0 right-0 w-8 h-8 sm:w-16 sm:h-16 bg-neo-black triangle-corner"></div>
                 
                 <div className="flex flex-col md:flex-row gap-12 items-center">
                     {/* Visual Side with Dynamic Phone */}
@@ -76,7 +76,7 @@ const AgeProgression = () => {
                             <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
                             {/* The Phone Device */}
-                            <div className={`relative w-48 h-80 sm:w-52 sm:h-96 bg-neo-black rounded-[2.5rem] border-4 border-neo-black shadow-neo-xl transition-all duration-500 transform ${activeTab === 'starter' ? 'rotate-[-3deg]' : 'rotate-[3deg]'}`}>
+                            <div className={`relative w-40 h-72 sm:w-48 sm:h-80 md:w-52 md:h-96 bg-neo-black rounded-[2rem] sm:rounded-[2.5rem] border-4 border-neo-black shadow-neo-xl transition-all duration-500 transform ${activeTab === 'starter' ? 'rotate-[-3deg]' : 'rotate-[3deg]'}`}>
                                 
                                 {/* Physical Buttons */}
                                 <div className="absolute top-24 -left-1.5 w-1.5 h-10 bg-gray-800 rounded-l-lg"></div>
@@ -84,16 +84,16 @@ const AgeProgression = () => {
                                 <div className="absolute top-28 -right-1.5 w-1.5 h-12 bg-neo-red rounded-r-lg"></div>
 
                                 {/* Screen Area */}
-                                <div className="w-full h-full bg-white rounded-[2.2rem] overflow-hidden border-[3px] border-gray-800 flex flex-col relative">
+                                <div className="w-full h-full bg-white rounded-[1.8rem] sm:rounded-[2.2rem] overflow-hidden border-[3px] border-gray-800 flex flex-col relative">
                                     
                                     {/* Notch / Dynamic Island */}
-                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 h-6 w-24 bg-black rounded-b-xl z-20 flex justify-center items-center gap-2">
-                                        <div className="w-10 h-1 bg-gray-800 rounded-full opacity-50"></div>
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 h-5 sm:h-6 w-20 sm:w-24 bg-black rounded-b-xl z-20 flex justify-center items-center gap-2">
+                                        <div className="w-8 sm:w-10 h-1 bg-gray-800 rounded-full opacity-50"></div>
                                         <div className="w-1 h-1 bg-blue-900 rounded-full"></div>
                                     </div>
 
                                     {/* Status Bar */}
-                                    <div className="h-8 w-full flex justify-between items-center px-5 pt-2 text-[10px] font-bold font-mono">
+                                    <div className="h-7 sm:h-8 w-full flex justify-between items-center px-4 sm:px-5 pt-2 text-[10px] font-bold font-mono">
                                         <span>9:41</span>
                                         <div className="flex gap-1">
                                             <BatteryIcon className="w-4 h-4" />
@@ -101,54 +101,54 @@ const AgeProgression = () => {
                                     </div>
 
                                     {/* Dynamic UI Content */}
-                                    <div className="flex-1 flex flex-col items-center p-4 pt-8 transition-opacity duration-300">
+                                    <div className="flex-1 flex flex-col items-center p-3 sm:p-4 pt-6 sm:pt-8 transition-opacity duration-300">
                                         
                                         {activeTab === 'starter' ? (
                                             // STARTER MODE UI
-                                            <div className="w-full flex flex-col gap-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                                            <div className="w-full flex flex-col gap-2 sm:gap-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
                                                 <div className="w-full aspect-square bg-neo-green border-4 border-neo-black rounded-2xl flex flex-col items-center justify-center shadow-neo-sm transform hover:scale-105 transition-transform cursor-default">
-                                                    <PhoneIcon className="w-12 h-12 mb-1" />
-                                                    <span className="font-black uppercase text-sm">Call Mom</span>
+                                                    <PhoneIcon className="w-10 h-10 sm:w-12 sm:h-12 mb-1" />
+                                                    <span className="font-black uppercase text-xs sm:text-sm">Call Mom</span>
                                                 </div>
-                                                <div className="grid grid-cols-2 gap-3">
+                                                <div className="grid grid-cols-2 gap-2 sm:gap-3">
                                                     <div className="aspect-square bg-neo-yellow border-4 border-neo-black rounded-2xl flex flex-col items-center justify-center shadow-neo-sm">
-                                                        <MessageIcon className="w-8 h-8 mb-1" />
-                                                        <span className="font-bold uppercase text-[10px]">Text</span>
+                                                        <MessageIcon className="w-6 h-6 sm:w-8 sm:h-8 mb-1" />
+                                                        <span className="font-bold uppercase text-[9px] sm:text-[10px]">Text</span>
                                                     </div>
                                                     <div className="aspect-square bg-white border-4 border-neo-black rounded-2xl flex flex-col items-center justify-center shadow-neo-sm">
-                                                        <MapPin className="w-8 h-8 mb-1" />
-                                                        <span className="font-bold uppercase text-[10px]">Find</span>
+                                                        <MapPin className="w-6 h-6 sm:w-8 sm:h-8 mb-1" />
+                                                        <span className="font-bold uppercase text-[9px] sm:text-[10px]">Find</span>
                                                     </div>
                                                 </div>
-                                                <div className="mt-2 text-center text-[10px] font-mono font-bold bg-gray-100 p-1 rounded border-2 border-gray-200">
+                                                <div className="mt-2 text-center text-[9px] sm:text-[10px] font-mono font-bold bg-gray-100 p-1 rounded border-2 border-gray-200">
                                                     SAFE MODE: ON
                                                 </div>
                                             </div>
                                         ) : (
                                             // PRO MODE UI
-                                            <div className="w-full h-full flex flex-col justify-between animate-in fade-in slide-in-from-bottom-4 duration-500 pt-2">
-                                                <div className="grid grid-cols-3 gap-2">
+                                            <div className="w-full h-full flex flex-col justify-between animate-in fade-in slide-in-from-bottom-4 duration-500 pt-1 sm:pt-2">
+                                                <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                                                     {[
-                                                        { color: 'bg-neo-purple text-white', icon: <Brain className="w-4 h-4"/>, label: "Study" },
-                                                        { color: 'bg-green-400', icon: <PhoneIcon className="w-4 h-4"/>, label: "Call" },
-                                                        { color: 'bg-yellow-400', icon: <MessageIcon className="w-4 h-4"/>, label: "Chat" },
-                                                        { color: 'bg-blue-400', icon: <MusicIcon className="w-4 h-4"/>, label: "Music" },
-                                                        { color: 'bg-gray-200', icon: <CalcIcon className="w-4 h-4"/>, label: "Calc" },
-                                                        { color: 'bg-red-400', icon: <MapPin className="w-4 h-4"/>, label: "Maps" },
+                                                        { color: 'bg-neo-purple text-white', icon: <Brain className="w-3 h-3 sm:w-4 sm:h-4"/>, label: "Study" },
+                                                        { color: 'bg-green-400', icon: <PhoneIcon className="w-3 h-3 sm:w-4 sm:h-4"/>, label: "Call" },
+                                                        { color: 'bg-yellow-400', icon: <MessageIcon className="w-3 h-3 sm:w-4 sm:h-4"/>, label: "Chat" },
+                                                        { color: 'bg-blue-400', icon: <MusicIcon className="w-3 h-3 sm:w-4 sm:h-4"/>, label: "Music" },
+                                                        { color: 'bg-gray-200', icon: <CalcIcon className="w-3 h-3 sm:w-4 sm:h-4"/>, label: "Calc" },
+                                                        { color: 'bg-red-400', icon: <MapPin className="w-3 h-3 sm:w-4 sm:h-4"/>, label: "Maps" },
                                                     ].map((app, i) => (
-                                                        <div key={i} className="flex flex-col items-center gap-1">
+                                                        <div key={i} className="flex flex-col items-center gap-0.5 sm:gap-1">
                                                             <div className={`w-full aspect-square ${app.color} border-2 border-black rounded-xl flex items-center justify-center shadow-sm`}>
                                                                 {app.icon}
                                                             </div>
-                                                            <span className="text-[8px] font-bold uppercase tracking-tight">{app.label}</span>
+                                                            <span className="text-[7px] sm:text-[8px] font-bold uppercase tracking-tight">{app.label}</span>
                                                         </div>
                                                     ))}
                                                 </div>
                                                 {/* Dock */}
-                                                <div className="bg-gray-200/80 rounded-2xl p-2 grid grid-cols-3 gap-2 backdrop-blur-sm border border-gray-300">
-                                                     <div className="aspect-square bg-green-500 rounded-lg border-2 border-black flex items-center justify-center"><PhoneIcon className="w-4 h-4 text-white"/></div>
-                                                     <div className="aspect-square bg-white rounded-lg border-2 border-black flex items-center justify-center"><CameraIcon className="w-4 h-4"/></div>
-                                                     <div className="aspect-square bg-gray-800 rounded-lg border-2 border-black flex items-center justify-center"><SettingsIcon className="w-4 h-4 text-white"/></div>
+                                                <div className="bg-gray-200/80 rounded-2xl p-1.5 sm:p-2 grid grid-cols-3 gap-1.5 sm:gap-2 backdrop-blur-sm border border-gray-300">
+                                                     <div className="aspect-square bg-green-500 rounded-lg border-2 border-black flex items-center justify-center"><PhoneIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white"/></div>
+                                                     <div className="aspect-square bg-white rounded-lg border-2 border-black flex items-center justify-center"><CameraIcon className="w-3 h-3 sm:w-4 sm:h-4"/></div>
+                                                     <div className="aspect-square bg-gray-800 rounded-lg border-2 border-black flex items-center justify-center"><SettingsIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white"/></div>
                                                 </div>
                                             </div>
                                         )}
@@ -160,7 +160,7 @@ const AgeProgression = () => {
                             </div>
                             
                             {/* Floating Badge */}
-                            <div className="absolute bottom-6 left-6 bg-white px-3 py-2 border-4 border-black font-mono text-xs font-bold shadow-neo z-10 rotate-3">
+                            <div className="absolute bottom-6 left-6 bg-white px-3 py-2 border-4 border-black font-mono text-xs font-bold shadow-neo z-10 rotate-3 hidden sm:block">
                                 MODEL: DB-{activeTab === 'starter' ? '01' : '02'}X
                             </div>
                          </div>
@@ -168,10 +168,10 @@ const AgeProgression = () => {
 
                     {/* Text Content Side */}
                     <div className="w-full md:w-1/2">
-                        <h3 className="text-3xl font-black uppercase mb-2">
+                        <h3 className="text-2xl sm:text-3xl font-black uppercase mb-2">
                             {activeTab === 'starter' ? 'Lockdown Mode' : 'Freedom Mode'}
                         </h3>
-                        <p className="font-mono font-bold text-gray-500 mb-6">
+                        <p className="font-mono font-bold text-gray-500 mb-6 text-sm sm:text-base">
                             {activeTab === 'starter' ? 'Pure communication. Zero distractions. The digital training wheels.' : 'Controlled access. Study tools unlocked. Music allowed.'}
                         </p>
                         
@@ -187,7 +187,7 @@ const AgeProgression = () => {
                                     <div className="w-6 h-6 bg-neo-black text-white flex items-center justify-center rounded-full shrink-0">
                                         <CheckCircle className="w-3 h-3" />
                                     </div>
-                                    <span className="font-bold uppercase text-sm">{feat}</span>
+                                    <span className="font-bold uppercase text-xs sm:text-sm">{feat}</span>
                                 </li>
                             ))}
                         </ul>
