@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -18,7 +19,7 @@ export default function App() {
         <Marquee 
             text="NO TIKTOK • NO REELS • NO DOOMSCROLLING • NO ADDICTION • JUST LIFE •" 
             className="bg-neo-yellow text-neo-black transform rotate-1 z-20 relative -mt-10 border-t-4" 
-            speed="fast"
+            speed="slow"
         />
         <Problem />
         <Features />
@@ -26,6 +27,7 @@ export default function App() {
             text="SAFE FOR KIDS • SANITY FOR PARENTS • 30 DAY MONEY BACK GUARANTEE •" 
             className="bg-neo-black text-neo-white border-none" 
             direction="right"
+            speed="normal"
         />
         <AgeProgression />
         <Testimonials />
