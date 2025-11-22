@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoomBlocker | Kill The Addiction, Keep The Kid</title>
+    <meta name="description" content="The tamper-proof Android phone that eliminates screen addiction. No TikTok. No Reels. Just life." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@300;400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Lexend Mega"', 'sans-serif'],
+              mono: ['"Space Mono"', 'monospace'],
+            },
+            colors: {
+              neo: {
+                bg: '#FFFFFF',
+                black: '#000000',
+                white: '#FFFFFF',
+                yellow: '#FAFF00', // Warning
+                green: '#00FF85', // Success/Go
+                red: '#FF2E00',   // Stop/Danger
+                blue: '#3B82F6',  // Trust
+                purple: '#A855F7',
+                gray: '#F3F4F6',
+              }
+            },
+            boxShadow: {
+              'neo': '4px 4px 0px 0px #000000',
+              'neo-lg': '8px 8px 0px 0px #000000',
+              'neo-xl': '12px 12px 0px 0px #000000',
+              'neo-hover': '2px 2px 0px 0px #000000',
+              'neo-flat': '0px 0px 0px 0px #000000',
+            },
+            animation: {
+              'marquee': 'marquee 20s linear infinite',
+              'marquee-reverse': 'marquee-reverse 20s linear infinite',
+              'float': 'float 4s ease-in-out infinite',
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              'marquee-reverse': {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(0%)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FFFFFF;
+        color: #000000;
+        overflow-x: hidden;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 16px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+        border-left: 2px solid #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00FF85;
+        border: 2px solid #000000;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FAFF00;
+      }
+
+      .text-outline {
+        -webkit-text-stroke: 2px #000000;
+        color: transparent;
+      }
+      
+      .text-outline-white {
+        -webkit-text-stroke: 2px #ffffff;
+        color: transparent;
+      }
+      
+      /* Brutalist Texture */
+      .noise-bg {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
